@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Socket Web - Glossario</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"><strong>Socket Web</strong></a>
+        <button class="navbar-toggler" type="button" id="navbar-toggler" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="socket.html">Socket</a></li>
+            <li class="nav-item"><a class="nav-link" href="osi-transport.html">Modello OSI</a></li>
+            <li class="nav-item"><a class="nav-link" href="tcp-udp.html">TCP vs UDP</a></li>
+            <li class="nav-item"><a class="nav-link active" href="glossario.html">Glossario</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content Section -->
+    <section class="main-section py-5">
+      <div class="container">
+        <h1 class="text-center mb-4">Glossario dei Termini di Rete</h1>
+        <p class="lead text-center">Un elenco dei termini più comuni utilizzati nel contesto delle comunicazioni di rete e delle socket.</p>
+
+        <!-- Glossary List -->
+        <section class="glossary-list py-4">
+          <ul class="list-group">
+            <li class="list-group-item"><strong>Socket:</strong> Un endpoint per la comunicazione di rete tra due dispositivi. I socket possono essere utilizzati per la comunicazione tramite TCP, UDP o altri protocolli.</li>
+            <li class="list-group-item"><strong>IP Address:</strong> Un indirizzo univoco che identifica un dispositivo in una rete. Esistono indirizzi IPv4 (es. 192.168.1.1) e IPv6 (es. 2001:0db8:85a3:0000:0000:8a2e:0370:7334).</li>
+            <li class="list-group-item"><strong>TCP (Transmission Control Protocol):</strong> Un protocollo orientato alla connessione che garantisce la consegna affidabile dei dati, utilizzato in situazioni in cui l'affidabilità è essenziale.</li>
+            <li class="list-group-item"><strong>UDP (User Datagram Protocol):</strong> Un protocollo non orientato alla connessione che non garantisce l'affidabilità, ma è più veloce di TCP. Viene utilizzato per applicazioni che richiedono velocità piuttosto che affidabilità.</li>
+            <li class="list-group-item"><strong>Port:</strong> Un numero utilizzato per identificare una specifica applicazione o servizio su un dispositivo di rete. Ad esempio, il port 80 è utilizzato per HTTP.</li>
+            <li class="list-group-item"><strong>Protocollo di Rete:</strong> Un insieme di regole e convenzioni che consentono la comunicazione tra dispositivi in una rete.</li>
+          </ul>
+        </section>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer bg-dark text-white text-center py-4 fixed-bottom">
+      <p>&copy; 2024 Socket Web | Creato da Cristian Rondina - 5E</p>
+    </footer>
+
+    <!-- Link to Custom JS -->
+    <script src="/js/glossario.js"></script>
+  </body>
+</html>

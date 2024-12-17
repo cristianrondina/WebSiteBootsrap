@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Socket Web - TCP vs UDP</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"><strong>Socket Web</strong></a>
+        <button class="navbar-toggler" type="button" id="navbar-toggler" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="socket.html">Socket</a></li>
+            <li class="nav-item"><a class="nav-link" href="osi-transport.html">Modello OSI</a></li>
+            <li class="nav-item"><a class="nav-link active" href="tcp-udp.html">TCP vs UDP</a></li>
+            <li class="nav-item"><a class="nav-link" href="glossario.html">Glossario</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content Section -->
+    <section class="main-section py-5">
+      <div class="container">
+        <h1 class="text-center mb-4">TCP vs UDP</h1>
+        <p class="lead text-center">In questa sezione esploreremo le differenze tra i protocolli TCP e UDP, due dei protocolli più utilizzati nelle comunicazioni di rete.</p>
+
+        <!-- TCP vs UDP Comparison Table -->
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>Caratteristica</th>
+              <th>TCP</th>
+              <th>UDP</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Affidabilità</td>
+              <td>Affidabile (conferme di ricezione)</td>
+              <td>Non affidabile (senza conferme)</td>
+            </tr>
+            <tr>
+              <td>Controllo Flusso</td>
+              <td>Presente</td>
+              <td>Assente</td>
+            </tr>
+            <tr>
+              <td>Velocità</td>
+              <td>Lenta</td>
+              <td>Veloce</td>
+            </tr>
+            <tr>
+              <td>Connessione</td>
+              <td>Orientato alla connessione</td>
+              <td>Non orientato alla connessione</td>
+            </tr>
+            <tr>
+              <td>Uso Comune</td>
+              <td>Web, email, FTP</td>
+              <td>Video, audio streaming, giochi online</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <!-- Detailed Comparison of TCP and UDP -->
+        <section class="tcp-udp-comparison py-4">
+          <h2 class="text-center mb-4">Confronto Dettagliato tra TCP e UDP</h2>
+          <p>Entrambi i protocolli operano al <strong>livello di trasporto</strong> nel modello OSI, ma presentano differenze cruciali:</p>
+          <ul>
+            <li><strong>TCP (Transmission Control Protocol)</strong>
+              <ul>
+                <li><strong>Affidabilità:</strong> TCP è un protocollo orientato alla connessione e garantisce l'affidabilità. I dati vengono inviati in sequenza e il destinatario invia una conferma per ogni pacchetto ricevuto correttamente.</li>
+                <li><strong>Controllo degli errori:</strong> TCP ha un sistema di controllo degli errori che rileva pacchetti mancanti o corrotti e li ritrasmette.</li>
+                <li><strong>Flusso e Congestione:</strong> TCP include il controllo del flusso e della congestione per gestire la quantità di dati trasmessi senza sovraccaricare la rete.</li>
+                <li><strong>Utilizzo:</strong> È adatto per applicazioni che richiedono alta affidabilità, come il trasferimento di file (FTP), il web (HTTP) e l'email (SMTP).</li>
+              </ul>
+            </li>
+            <li><strong>UDP (User Datagram Protocol)</strong>
+              <ul>
+                <li><strong>Velocità:</strong> UDP è più veloce di TCP, poiché non garantisce la consegna dei pacchetti e non esegue il controllo degli errori.</li>
+                <li><strong>Non orientato alla connessione:</strong> UDP non stabilisce una connessione prima di inviare i dati, il che lo rende più adatto per applicazioni in tempo reale.</li>
+                <li><strong>Utilizzo:</strong> UDP è preferito per applicazioni come lo streaming video/audio, giochi online, e altre comunicazioni in tempo reale dove la velocità è critica e una piccola perdita di dati è tollerabile.</li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+      </div>
+    </section>
+
+    <!-- Summary Section -->
+    <section class=" text-center summary py-4">
+      <h2>Conclusioni</h2>
+      <p>TCP è più adatto quando è necessaria una comunicazione affidabile, mentre UDP è preferito per applicazioni che richiedono velocità e tollerano la perdita di pacchetti.</p>
+    </section>
+<!-- Footer -->
+<footer class="footer bg-dark text-white text-center py-4">
+  <p>&copy; 2024 Socket Web | Creato da Cristian Rondina - 5E</p>
+</footer>
+
+
+    <!-- Link to Custom JS -->
+    <script src="/js/tcp-udpScript.js"></script>
+  </body>
+</html>
